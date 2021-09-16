@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 1s ease all;
+}
+body {
+  /* background: #1e3c72;
+  background: linear-gradient(to right, #2a5298de, #1e3b72cb),
+    url(https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+
+  background-size: cover;
+  background-attachment: fixed; */
+}
+header {
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+}
+.nav {
+  width: 90%;
+  position: fixed;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  margin: auto;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  width: 50px;
+  object-fit: contain;
+}
+.logo h1 {
+  font-size: 1.2rem;
+  margin-top: 8px;
+  color: rgb(168, 167, 167);
+  margin-left: 4px;
+}
+
+.menu a {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: gray;
+}
+.menu input {
+  width: 300px;
+  outline: none;
+  border: none;
+  background-color: rgb(241, 241, 241);
+  border-radius: 10px;
+  padding: 7px 20px;
+  margin-left: 20px;
+  font-size: 1rem;
+}
+.poder {
+  width: 60%;
+  margin: 10px auto;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(237, 237, 237);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.226);
+}
+.load {
+  height: 10px;
+  border-radius: 10px;
+  background-color: #31c231;
+}
+.present {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.content-present {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.content-present img {
+  width: 200px;
+}
+.info-poke {
+  width: 60%;
+}
+.info-poke h1 {
+  font-size: 4rem;
+  color: rgb(5, 46, 36);
+}
+.info-poke p {
+  width: 60%;
+  font-size: 1rem;
+  margin: 10px auto;
+  font-weight: bold;
+  color: rgb(11, 42, 87);
+}
+
+.present > img {
+  width: 30%;
+  position: absolute;
+  opacity: 0.2;
+  z-index: -1;
+  transition: 1s ease all;
+}
+
+.results {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.item-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.item-result h3 {
+  font-size: 5rem;
+  font-weight: bold;
+  font-style: italic;
+  background: linear-gradient(
+    to right,
+    #4b134f,
+    #c94b4b
+  ); ;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.item-result span {
+  color: #4b134f;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.item-result p {
+  color: #c94b4b;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* search zone  */
+
+.search-pokemon {
+  width: 100%;
+  height: 100vh;
+}
+
+.content-search {
+  width: 90%;
+  margin: auto;
+}
+.content-search input {
+  width: 40%;
+  outline: none;
+  border: none;
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  padding: 7px 20px;
+}
+
+/**/
+
+.content {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 20vh;
+}
+
+.card {
+  background-color: white;
+  width: 300px;
+  height: 400px;
+  margin: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.card:hover{
+  transform: scale(1.2);
+}
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  border: 4px solid rgb(213, 213, 213);
+}
+.card h1 {
+  margin: 10px auto;
+  font-size: 2rem;
+  color: rgb(146, 220, 201);
+}
+.card p {
+  margin: 10px auto;
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: rgb(181, 181, 181);
+}
+
+.alert{
+  position: fixed;
+  width: auto;
+  height: 50px;
+  line-height: 18px;
+  outline: none;
+  border: none;
+  top: 15vh;
+  right: 50px;
+  background-color: rgb(255, 232, 232);
+  z-index: 2;
+}
+.alert p{
+  color: rgb(148, 41, 41);
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 600px) {
+  .content-present {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0vh;
+  }
+}
